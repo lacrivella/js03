@@ -62,6 +62,12 @@
   <script>
     const inputs = document.querySelectorAll('.controls input');
     // this returns a NodeList, NOT an array. NodeLists have fewer methods than arrays
+
+    function handleUpdate() {
+      console.log(this.value);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
   </script>
 
 </body>
